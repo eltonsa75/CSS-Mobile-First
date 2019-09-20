@@ -1,0 +1,39 @@
+Flexibilidade nos filhos
+
+A grande vantagem das medidas flexíveis é que elas afetam os elementos filhos. Isso ajuda bastante na acessibilidade:
+o usuário pode aumentar a fonte no navegador dele para ler melhor e todo o layout baseado em em é afetado
+
+<html>
+<body>
+  <article>
+      <h1>A Web mobile</h1>
+      <p>Não existe web mobile. Existe a Web.</p>
+  </article>
+</body>
+</html>
+
+Vimos que, na maioria dos navegadores, a fonte base mede 16px e é herdada pelos elementos da página.
+Ou seja, 1em vai ser 16px e 2em vai ser 32px . Mas podemos colocar
+outros valores:
+
+article {
+  font-size: 1.25em;
+ }
+ 
+  h1 {
+  font-size: 2em;
+ }
+ 
+ p {
+  font-size: 0.9em;
+ }
+ 
+ Qual é o tamanho da fonte de cada elemento?
+ 
+  => O html e o body vão ter os 16px base;
+  => O article terá 16px * 1.25 = 20px e esses
+    20px se tornam a base para todos os filhos de article;
+    => Assim, o h1 tem 20px * 2 = 40px; e
+    => O p vai ter 20px * 0.9 = 18px.
+  
+
